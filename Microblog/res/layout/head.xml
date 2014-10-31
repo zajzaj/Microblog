@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/head_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/default_padding"
+    android:background="@drawable/title_bg" >
+
+    <Button
+        android:id="@id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_padding"
+        android:gravity="center"
+        android:paddingLeft="10.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/back_btn_bg"
+        android:textSize="@dimen/home_tab_font_size"
+        android:textColor="@android:color/white"
+        android:text="@string/back" />
+
+    <Button
+        android:id="@id/fun_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_padding"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:background="@drawable/add_btn_bg"
+        android:textSize="@dimen/home_tab_font_size"
+        android:textColor="@android:color/white"
+        android:text="@string/add" />
+
+    <TextView
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/title_font_size"
+        android:textColor="@android:color/white"
+        android:text="@string/grid" />
+
+</RelativeLayout>

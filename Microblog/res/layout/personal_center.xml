@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_all"
+    android:orientation="vertical" >
+
+    <include layout="@layout/head" />
+
+    <ImageView
+        android:id="@id/personal_head"
+        android:layout_width="88dp"
+        android:layout_height="95dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/headpic_defalut_image" />
+
+    <TextView
+        android:id="@id/personal_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:text="啦啦啦啦啦阿里"
+        android:textColor="@color/tweet_text_black"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#93db70" >
+
+        <TextView
+            android:id="@+id/editText1"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:text="关注"
+            android:textColor="@color/tweet_text_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@id/personal_focus_count"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/tweet_text_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/editText2"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:text="粉丝"
+            android:textColor="@color/tweet_text_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@id/personal_fans_count"
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/tweet_text_black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/light_grey"
+        android:dividerHeight="@dimen/list_divider_height"
+        android:listSelector="@android:color/transparent" >
+    </ListView>
+
+</LinearLayout>

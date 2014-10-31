@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@id/personal_info_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="top"
+        android:padding="@dimen/list_item_padding" >
+
+        <ImageView
+            android:id="@id/personal_item_img"
+            android:layout_width="@dimen/list_item_img"
+            android:layout_height="@dimen/list_item_img"
+            android:src="@drawable/headpic_defalut_image" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="@dimen/list_item_padding"
+            android:layout_marginRight="@dimen/list_item_padding" >
+
+            <TextView
+                android:id="@id/personal_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:text="@string/defalut_name"
+                android:textColor="@color/grid_item_text_black"
+                android:textSize="@dimen/title_font_size" />
+
+            <TextView
+                android:id="@id/personal_message_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:singleLine="true"
+                android:text="2014-10-26 13:00" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/tweet_content"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:layout_marginTop="-2.0dip"
+        android:background="@color/tweet_white"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="2dp" >
+
+        <TextView
+            android:id="@id/personal_tweet_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@string/tweet_message"
+            android:textColor="@color/tweet_text_black"
+            android:textSize="@dimen/tweet_font_size" />
+
+        <Button
+            android:id="@id/personal_tweet_repost"
+            android:layout_width="@dimen/tweet_btn_width"
+            android:layout_height="@dimen/tweet_btn_height"
+            android:layout_alignTop="@id/personal_tweet_repost_count"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@id/personal_tweet_repost_count"
+            android:background="@drawable/repost_button"
+            android:gravity="center" />
+
+        <Button
+            android:id="@id/personal_tweet_comment"
+            android:layout_width="@dimen/tweet_btn_width"
+            android:layout_height="@dimen/tweet_btn_height"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@id/personal_tweet_message"
+            android:layout_marginRight="72dp"
+            android:background="@drawable/comment_button"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@id/personal_tweet_repost_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/personal_tweet_comment"
+            android:layout_marginRight="22dp"
+            android:layout_toLeftOf="@id/personal_tweet_comment"
+            android:gravity="right"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/tweet_text_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@id/personal_tweet_comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/personal_tweet_comment"
+            android:layout_alignRight="@id/personal_tweet_message"
+            android:layout_marginRight="22dp"
+            android:gravity="right"
+            android:text="1000"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/tweet_text_black"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

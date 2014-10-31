@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    
+    <color name="bg_all">#ffe1e1e1</color>
+    <color name="list_item_bg_normal">#ffefefef</color>
+    <color name="list_item_border">#FFBFBFBF</color>
+    <color name="grid_item_text_black">#ff3c332e</color>
+    <color name="light_grey">#FFCECECE</color>
+    <color name="tweet_white">#FFFCFB</color>
+    
+    <color name="tweet_text_black">#3e3e39</color>
+
+</resources>

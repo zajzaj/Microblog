@@ -22,7 +22,6 @@ import android.widget.Toast;
 
 public class RegisterActivity extends Activity {
 
-	public static final String URL = "http://10.0.2.2:8080/HttpTest/login";
 	private String username_bak;
 	private TextView title;
 	private Button backBtn;
@@ -105,7 +104,7 @@ public class RegisterActivity extends Activity {
 							BasicNameValuePair basic = new BasicNameValuePair("PASSWORD",password);
 							paramsList.add(basic);
 							HttpUtil hu = new HttpUtil();
-							String res = hu.doPost(URL, "2", paramsList);
+							String res = hu.doPost(LoginActivity.URL, "2", paramsList);
 							Log.i("ressss", res);
 
 							try {

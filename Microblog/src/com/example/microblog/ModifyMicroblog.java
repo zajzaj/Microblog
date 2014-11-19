@@ -26,7 +26,6 @@ public class ModifyMicroblog extends Activity {
 
 	private String username;
 	private int tweet_id;
-	public static final String URL = "http://10.0.2.2:8080/HttpTest/login";
 	private TextView title;
 	private Button backBtn;
 	private Button funBtn;
@@ -100,7 +99,7 @@ public class ModifyMicroblog extends Activity {
 									comment));
 
 							HttpUtil hu = new HttpUtil();
-							String res = hu.doPost(URL, "8", paramsList);
+							String res = hu.doPost(LoginActivity.URL, "8", paramsList);
 							Log.i("ressss", res);
 
 							try {

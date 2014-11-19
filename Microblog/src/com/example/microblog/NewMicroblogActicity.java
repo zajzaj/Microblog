@@ -28,7 +28,6 @@ public class NewMicroblogActicity extends Activity {
 	private Button backBtn;
 	private Button funBtn;
 	public static String username = "";
-	public static final String URL = "http://10.0.2.2:8080/HttpTest/login";
 
 	Handler mHandler = new Handler() {
 		public void handleMessage(Message msg) {
@@ -106,7 +105,7 @@ public class NewMicroblogActicity extends Activity {
 									comment));
 
 							HttpUtil hu = new HttpUtil();
-							String res = hu.doPost(URL, "3", paramsList);
+							String res = hu.doPost(LoginActivity.URL, "3", paramsList);
 							Log.i("ressss", res);
 
 							try {

@@ -34,7 +34,6 @@ import android.os.Build;
 
 public class HomePageActivity extends ListActivity {
 	/* head */
-	public static final String URL = "http://10.0.2.2:8080/HttpTest/login";
 	private TextView title;
 	private Button backBtn;
 	private Button funBtn;
@@ -54,7 +53,7 @@ public class HomePageActivity extends ListActivity {
 					paramsList.add(new BasicNameValuePair("CHOSE", "4"));
 					paramsList.add(new BasicNameValuePair("USERNAME", username));
 					HttpUtil hu = new HttpUtil();
-					String res = hu.doPost(URL, "4", paramsList);
+					String res = hu.doPost(LoginActivity.URL, "4", paramsList);
 					Log.i("ressss", res);
 
 					try {

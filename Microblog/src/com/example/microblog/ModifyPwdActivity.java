@@ -22,7 +22,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class ModifyPwdActivity extends Activity{
-	public static final String URL = "http://10.0.2.2:8080/HttpTest/login";
 	public static String username="";
 	Handler mHandler = new Handler() {
 		public void handleMessage(Message msg) {
@@ -97,7 +96,7 @@ public class ModifyPwdActivity extends Activity{
 								paramsList.add(new BasicNameValuePair("NEWPASSWORD",newPassword));
 
 								HttpUtil hu = new HttpUtil();
-								String res = hu.doPost(URL, "7", paramsList);
+								String res = hu.doPost(LoginActivity.URL, "7", paramsList);
 								Log.i("ressss", res);
 
 								try {

@@ -28,7 +28,6 @@ public class CommentActivity extends Activity {
 	private Button funBtn;
 	private String username;
 	private int tweet_id;
-	public static final String URL = "http://10.0.2.2:8080/HttpTest/login";
 	
 	Handler mHandler = new Handler() {
 		public void handleMessage(Message msg) {
@@ -98,7 +97,7 @@ public class CommentActivity extends Activity {
 									comment));
 
 							HttpUtil hu = new HttpUtil();
-							String res = hu.doPost(URL, "5", paramsList);
+							String res = hu.doPost(LoginActivity.URL, "5", paramsList);
 							Log.i("ressss", res);
 
 							try {

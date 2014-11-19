@@ -26,6 +26,7 @@ public class LoginActivity extends Activity {
 
 	private String username_bak;
 	public static final String URL = "http://10.0.2.2:8080/HttpTest/login";
+	//public static final String URL = "http://192.168.1.113:8080/HttpTest/login";
     private int follow, fans;
 	Handler mHandler = new Handler() {
 		public void handleMessage(Message msg) {
@@ -94,7 +95,7 @@ public class LoginActivity extends Activity {
 									"PASSWORD", password);
 							paramsList.add(basic);
 							HttpUtil hu = new HttpUtil();
-							String res = hu.doPost(URL, "1", paramsList);
+							String res = hu.doPost(LoginActivity.URL, "1", paramsList);
 							Log.i("ressss", res);
 
 							try {

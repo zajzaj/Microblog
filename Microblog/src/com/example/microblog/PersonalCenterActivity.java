@@ -37,7 +37,6 @@ public class PersonalCenterActivity extends ListActivity {
     private String back_username;
     private String front_username;
 
-	public static final String URL = "http://10.0.2.2:8080/HttpTest/login";
 	private ListView listView;
 
 	ArrayList<Map<String, Object>> mData = new ArrayList<Map<String, Object>>();
@@ -52,7 +51,7 @@ public class PersonalCenterActivity extends ListActivity {
 					paramsList.add(new BasicNameValuePair("CHOSE", "6"));
 					paramsList.add(new BasicNameValuePair("USERNAME", front_username));
 					HttpUtil hu = new HttpUtil();
-					String res = hu.doPost(URL, "6", paramsList);
+					String res = hu.doPost(LoginActivity.URL, "6", paramsList);
 					Log.i("ressss", res);
 
 					try {

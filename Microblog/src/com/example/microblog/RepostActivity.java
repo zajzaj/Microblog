@@ -29,7 +29,6 @@ public class RepostActivity extends Activity {
 	private Button funBtn;
 	String username;
 	String comment;
-	public static final String URL = "http://10.0.2.2:8080/HttpTest/login";
 	
 	Handler mHandler = new Handler() {
 		public void handleMessage(Message msg) {
@@ -100,7 +99,7 @@ public class RepostActivity extends Activity {
 									comment));
 
 							HttpUtil hu = new HttpUtil();
-							String res = hu.doPost(URL, "3", paramsList);
+							String res = hu.doPost(LoginActivity.URL, "3", paramsList);
 							Log.i("ressss", res);
 
 							try {

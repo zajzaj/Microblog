@@ -40,7 +40,7 @@
                 android:background="@drawable/txt_sharp"
                 android:hint="@string/user_hint"
                 android:inputType="text"
-                android:textColor="#000000"
+                android:textColor="@color/grid_item_text_black"
                 android:textSize="16sp"
                 android:gravity="center"/>
           
@@ -52,7 +52,7 @@
                 android:background="@drawable/txt_sharp"
                 android:hint="@string/password_hint"
                 android:inputType="textPassword"
-                android:textColor="#000000"
+                android:textColor="@color/grid_item_text_black"
                 android:textSize="14sp"
                 android:gravity="center" >
 

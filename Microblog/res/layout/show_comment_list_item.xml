@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="vertical" 
+    android:descendantFocusability= "blocksDescendants">
+
+    <LinearLayout
+        android:id="@id/sc_info_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+       
+        android:background="@color/tweet_white"
+        android:gravity="top"
+        android:padding="@dimen/list_item_padding" >
+
+        <ImageView
+            android:id="@id/sc_item_img"
+            android:layout_width="@dimen/list_item_img"
+            android:layout_height="@dimen/list_item_img"
+            android:src="@drawable/headpic_defalut_image" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="@dimen/list_item_padding"
+            android:layout_marginRight="@dimen/list_item_padding" >
+
+            <TextView
+                android:id="@id/sc_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:text="@string/defalut_name"
+                android:textColor="@color/grid_item_text_black"
+                android:textSize="@dimen/title_font_size" />
+
+            <TextView
+                android:id="@id/sc_message_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sc_name_text"
+                android:singleLine="true"
+                android:text="2014-10-26 13:00" />
+
+          
+        </RelativeLayout>
+    </LinearLayout>
+
+        <TextView
+            android:id="@id/sc_comment"
+            android:background="@color/tweet_white"
+            android:textColor="@color/tweet_text_black"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="left|center"
+            android:lineSpacingMultiplier="1.2" 
+            android:textSize="@dimen/tweet_font_size"
+            android:text="@string/tweet_message"/>
+
+        <View  
+        android:layout_width="fill_parent"  
+        android:layout_height="@dimen/border"  
+        android:background="@color/light_grey" />
+    
+   
+
+</LinearLayout>

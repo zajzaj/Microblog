@@ -16,11 +16,12 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name" >
-            <intent-filter>
+                        <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".NewMicroblogActicity"
@@ -53,6 +54,11 @@
         <activity
             android:name=".ModifyMicroblog"
             android:label="@string/title_activity_modify_microblog" >
+        </activity>
+                <activity
+            android:name="com.example.microblog.ShowCommentActivity"
+            android:label="@string/title_activity_show_comment" >
+
         </activity>
     </application>
 

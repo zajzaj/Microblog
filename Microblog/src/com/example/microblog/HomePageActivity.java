@@ -39,6 +39,7 @@ public class HomePageActivity extends ListActivity {
 	private Button funBtn;
 	private ListView listView;
 
+	ArrayList<Map<String, Object>> mData1 = new ArrayList<Map<String, Object>>();
 	ArrayList<Map<String, Object>> mData = new ArrayList<Map<String, Object>>();
 	String username;
 
@@ -48,7 +49,8 @@ public class HomePageActivity extends ListActivity {
 		try {
 			new Thread(new Runnable() {
 				@Override
-				public void run() {
+		
+				public synchronized void run() {
 					List<BasicNameValuePair> paramsList = new ArrayList<BasicNameValuePair>();
 					paramsList.add(new BasicNameValuePair("CHOSE", "4"));
 					paramsList.add(new BasicNameValuePair("USERNAME", username));
@@ -162,8 +164,32 @@ public class HomePageActivity extends ListActivity {
 		});
 
 		// listView = getListView();
-		getData();
-
+	    getData();
+	    try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		/*Map<String, Object> item = new HashMap<String, Object>();
+		item.put("item_img",
+				R.drawable.headpic_defalut_image);
+		item.put("name_text","test");
+		item.put("message_time","Test");
+		item.put("tweet_message", "test");
+		item.put("tweet_id",1);
+		mData.add(item);*/
+	    /*
+		for (int i = 0; i < mData1.size(); i++) {
+			Map<String, Object> item = new HashMap<String, Object>();
+			item.put("item_img",
+					R.drawable.headpic_defalut_image);
+			item.put("name_text", "test");
+			item.put("message_time","1:1:1:1");
+			item.put("tweet_message", "hahahaha");
+			item.put("tweet_id",i);
+			mData.add(mData1.get(i));	
+		}*/
 		listView = (ListView) findViewById(android.R.id.list);
 		MyAdapter myAdapter = new MyAdapter(this);
 		listView.setAdapter(myAdapter);

@@ -133,6 +133,12 @@ public class PersonalCenterActivity extends ListActivity {
 			}
 		});
         getData();
+        try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		listView = (ListView) findViewById(android.R.id.list);
 		MyAdapter myAdapter = new MyAdapter(this);
 		listView.setAdapter(myAdapter);

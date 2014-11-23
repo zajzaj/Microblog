@@ -344,4 +344,38 @@ public class UserDAOImpl {
 		}
 		return obj.toString();
 	}
+
+
+	public String showComments(int tweet_id) throws Exception {
+		try {
+			this.stat = con.createStatement();
+			System.out.println("stat 创建！");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// 结果集
+		System.out.println("stat 创建成功！");
+
+		JSONArray array = new JSONArray();
+		String sql = "SELECT * FROM comments WHERE tweet_id=" + String.valueOf(tweet_id);
+		System.out.println(sql);
+		System.out.println("开始执行！");
+		ResultSet rs = stat.executeQuery(sql);
+		System.out.println("执行成功！");
+		if (rs.next()) {
+			System.out.println("进入next！");
+			JSONObject obj = new JSONObject();
+			obj.put("name", rs.getString("USERNAME"));
+			obj.put("time", rs.getString("COMMENT_TIME"));
+			obj.put("text", rs.getString("COMMENT_CONTENT"));
+			array.add(obj);
+			System.out.println("登陆成功");
+		} 
+		if (stat != null) {
+			stat.close();
+			stat = null;
+		}
+		return array.toString();
+	}
 }

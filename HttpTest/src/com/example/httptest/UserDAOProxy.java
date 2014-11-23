@@ -50,4 +50,10 @@ public class UserDAOProxy {
     	System.out.println("2ret"+flag);
     	return flag;
     }
+    public String showComments(int tweet_id) throws Exception{
+    	String flag = idao.showComments(tweet_id);
+    	dbc.close();
+    	System.out.println("2ret"+flag);
+    	return flag;
+    }
 }

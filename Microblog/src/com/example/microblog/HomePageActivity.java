@@ -171,25 +171,6 @@ public class HomePageActivity extends ListActivity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		/*Map<String, Object> item = new HashMap<String, Object>();
-		item.put("item_img",
-				R.drawable.headpic_defalut_image);
-		item.put("name_text","test");
-		item.put("message_time","Test");
-		item.put("tweet_message", "test");
-		item.put("tweet_id",1);
-		mData.add(item);*/
-	    /*
-		for (int i = 0; i < mData1.size(); i++) {
-			Map<String, Object> item = new HashMap<String, Object>();
-			item.put("item_img",
-					R.drawable.headpic_defalut_image);
-			item.put("name_text", "test");
-			item.put("message_time","1:1:1:1");
-			item.put("tweet_message", "hahahaha");
-			item.put("tweet_id",i);
-			mData.add(mData1.get(i));	
-		}*/
 		listView = (ListView) findViewById(android.R.id.list);
 		MyAdapter myAdapter = new MyAdapter(this);
 		listView.setAdapter(myAdapter);
@@ -306,6 +287,22 @@ public class HomePageActivity extends ListActivity {
 					startActivity(intent);
 					// finish();
 				}
+			});
+			holder.tweet_comment.setOnLongClickListener(new OnLongClickListener(){
+
+				@Override
+				public boolean onLongClick(View v) {
+					// TODO Auto-generated method stub
+					Intent intent = new Intent(HomePageActivity.this,ShowCommentActivity.class);
+					Bundle bl = new Bundle();
+					bl.putString("USERNAME",username);
+                    bl.putInt("TWEET_ID",tweet_id);
+					intent.putExtras(bl);
+					startActivity(intent);
+					return true;
+				}
+				
+				
 			});
 			holder.tweet_repost.setOnClickListener(new OnClickListener() {
 				@Override

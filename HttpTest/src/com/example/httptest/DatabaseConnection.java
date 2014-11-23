@@ -11,7 +11,7 @@ public class DatabaseConnection {
 	        String url="jdbc:mysql://127.0.0.1:3307/Microblog"; 
 	        
 	        String user = "root";//Username for Mysql
-	        String password = "System123";//password£¡
+	        String password = "System123";//password
 	        System.out.println("Connecting to Mysql");
 	        con = DriverManager.getConnection(url, user, password);
 	        System.out.println("Connecting Success");

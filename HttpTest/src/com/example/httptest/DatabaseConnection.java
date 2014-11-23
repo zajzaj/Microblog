@@ -7,8 +7,8 @@ public class DatabaseConnection {
     public DatabaseConnection(){  
         try{  
         	System.out.println("TestDB!");
-        	Class.forName("com.mysql.jdbc.Driver");// 加载Oracle驱动程序
-	        String url="jdbc:mysql://127.0.0.1:3307/Microblog"; //orcl为数据库的SID
+        	Class.forName("com.mysql.jdbc.Driver");// 加载Mysql驱动程序
+	        String url="jdbc:mysql://127.0.0.1:3307/Microblog"; 
 	        
 	        String user = "root";// 用户名,系统默认的账户名
 	        String password = "System123";// 你安装时选设置的密码

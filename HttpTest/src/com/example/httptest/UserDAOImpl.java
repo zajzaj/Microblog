@@ -25,35 +25,32 @@ public class UserDAOImpl {
 
 		try {
 			this.stat = con.createStatement();
-			System.out.println("stat ´´½¨£¡");
+			System.out.println("stat åˆ›å»º");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// ½á¹û¼¯
 		JSONObject obj = new JSONObject();
-		System.out.println("stat ´´½¨³É¹¦£¡");
 		if (chose.equals("1")) {
 			String sql = "SELECT * FROM userinfo WHERE username=" + "'"
 					+ user.getUsername() + "'" + " and password=" + "'"
 					+ user.getPassword() + "'";
 			System.out.println(sql);
-			System.out.println("¿ªÊ¼Ö´ĞĞ£¡");
+			System.out.println("å¼€å§‹æ‰§è¡Œ");
 			ResultSet rs = stat.executeQuery(sql);
-			System.out.println("Ö´ĞĞ³É¹¦£¡");
+			System.out.println("æ‰§è¡ŒæˆåŠŸ");
 
 			if (rs.next()) {
-				System.out.println("½øÈënext£¡");
+				System.out.println("è¿›å…¥Result Set");
 				user.setUsername(rs.getString("username"));
 				user.setPassword(rs.getString("password"));
 				obj.put("Response", "1");
 				obj.put("USERNAME", user.getUsername());
 				obj.put("FOLLOW", rs.getInt("follow"));
 				obj.put("FANS", rs.getInt("fans"));
-				System.out.println("µÇÂ½³É¹¦");
 			} else {
 				obj.put("Response", "-1");
-				System.out.println("µÇÂ½Ê§°Ü");
+				System.out.println("ç©ºï¼");
 			}
 
 		}
@@ -65,9 +62,9 @@ public class UserDAOImpl {
 						+ user.getPassword() + "'" + "," + "0" + "," + "0"
 						+ ")";
 				System.out.println(sql);
-				System.out.println("¿ªÊ¼×¢²á");
+				System.out.println("å¼€å§‹æ‰§è¡Œ");
 				stat.execute(sql);
-				System.out.println("×¢²á³É¹¦");
+				System.out.println("æ‰§è¡ŒæˆåŠŸ");
 				obj.put("Response", "1");
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -88,32 +85,30 @@ public class UserDAOImpl {
 	{
 		try {
 			this.stat = con.createStatement();
-			System.out.println("stat ´´½¨£¡");
+			System.out.println("stat åˆ›å»º");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// ½á¹û¼¯
 		JSONObject obj = new JSONObject();
-		System.out.println("stat ´´½¨³É¹¦£¡");
 
 		{
-			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");// ÉèÖÃÈÕÆÚ¸ñÊ½
-			String currentTime = df.format(new Date());// new Date()Îª»ñÈ¡µ±Ç°ÏµÍ³Ê±¼ä
+			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			String currentTime = df.format(new Date());// new Date()
 			String sql = "INSERT INTO Microblog values(" + "null" + "," + "'"
 					+ microblog.getUsername() + "'" + "," + "'"
 					+ microblog.getMicroblog() + "','" + currentTime + "'"
 					+ ")";
 			System.out.println(sql);
-			System.out.println("¿ªÊ¼Ö´ĞĞ£¡");
+			System.out.println("å¼€å§‹æ‰§è¡Œ");
 			stat.execute(sql);
-			System.out.println("Ö´ĞĞ³É¹¦£¡");
+			System.out.println("æ‰§è¡ŒæˆåŠŸ");
 
 			obj.put("Response", "1");
-			System.out.println("·¢±í³É¹¦");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½É¹ï¿½");
 
 			/*
-			 * { obj.put("Response", "-1"); System.out.println("·¢±íÊ§°Ü"); }
+			 * { obj.put("Response", "-1"); System.out.println("ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½"); }
 			 */
 
 		}
@@ -129,19 +124,19 @@ public class UserDAOImpl {
 		JSONArray array = new JSONArray();
 		try {
 			this.stat = con.createStatement();
-			System.out.println("stat ´´½¨£¡");
+			System.out.println("stat åˆ›å»º");
 
 			String sql = "SELECT * FROM friend_relationship,Microblog WHERE friend_relationship.username1='"
 					+ username
 					+ "'"
 					+ "and friend_relationship.username2 = Microblog.username";
 			System.out.println(sql);
-			System.out.println("¿ªÊ¼Ö´ĞĞ£¡");
+			System.out.println("å¼€å§‹æ‰§è¡Œ");
 			ResultSet rs = stat.executeQuery(sql);
-			System.out.println("Ö´ĞĞ³É¹¦£¡");
+			System.out.println("æ‰§è¡ŒæˆåŠŸ");
 
 			while (rs.next()) {
-				System.out.println("½øÈënext£¡");
+				System.out.println("è¿›å…¥next");
 				JSONObject obj = new JSONObject();
 				obj.put("Response", "1");
 				obj.put("USERNAME", rs.getString("Microblog.username"));
@@ -178,34 +173,28 @@ public class UserDAOImpl {
 	{
 		try {
 			this.stat = con.createStatement();
-			System.out.println("stat ´´½¨£¡");
+			System.out.println("statåˆ›å»º");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// ½á¹û¼¯
+		// ï¿½ï¿½ï¿½
 		JSONObject obj = new JSONObject();
-		System.out.println("stat ´´½¨³É¹¦£¡");
+		System.out.println("stat åˆ›å»ºæˆåŠŸ");
 
 		{
-			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");// ÉèÖÃÈÕÆÚ¸ñÊ½
-			String currentTime = df.format(new Date());// new Date()Îª»ñÈ¡µ±Ç°ÏµÍ³Ê±¼ä
+			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			String currentTime = df.format(new Date());// new Date()
 			String sql = "INSERT INTO comments values(" + "null" + "," + "'"
 					+ Integer.valueOf(tweet_id) + "'" + "," + "'"
 					+ username + "','" + comment_content + "','" + currentTime + "'"
 					+ ")";
 			System.out.println(sql);
-			System.out.println("¿ªÊ¼Ö´ĞĞ£¡");
+			System.out.println("å¼€å§‹æ‰§è¡Œ");
 			stat.execute(sql);
-			System.out.println("Ö´ĞĞ³É¹¦£¡");
+			System.out.println("æ‰§è¡ŒæˆåŠŸ");
 
 			obj.put("Response", "1");
-			System.out.println("·¢±í³É¹¦");
-
-			/*
-			 * { obj.put("Response", "-1"); System.out.println("·¢±íÊ§°Ü"); }
-			 */
-
 		}
 		if (stat != null) {
 			stat.close();
@@ -217,7 +206,7 @@ public class UserDAOImpl {
 	public String getPersonalCenter(String username) throws Exception{
 		try {
 			this.stat = con.createStatement();
-			System.out.println("stat ´´½¨£¡");
+			System.out.println("stat å¼€å§‹åˆ›å»º");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -226,25 +215,24 @@ public class UserDAOImpl {
 		String sql = "SELECT * FROM userinfo WHERE username=" + "'"
 				+ username + "'" ;
 		System.out.println(sql);
-		System.out.println("¿ªÊ¼Ö´ĞĞ£¡");
+		System.out.println("å¼€å§‹æ‰§è¡Œ");
 		ResultSet rs = stat.executeQuery(sql);
-		System.out.println("Ö´ĞĞ³É¹¦£¡");
+		System.out.println("æ‰§è¡ŒæˆåŠŸ");
 		if (rs.next()) {
-			System.out.println("½øÈënext£¡");
+			System.out.println("è¿›å…¥next");
 			JSONObject obj = new JSONObject();
 			obj.put("FOLLOW", rs.getInt("follow"));
 			obj.put("FANS", rs.getInt("fans"));
 			array.add(obj);
-			System.out.println("µÇÂ½³É¹¦");
 		} 
 	    sql = "SELECT * FROM Microblog WHERE username='"+username+"'";
 		System.out.println(sql);
-		System.out.println("¿ªÊ¼Ö´ĞĞ£¡");
+		System.out.println("å¼€å§‹æ‰§è¡Œ");
 		rs = stat.executeQuery(sql);
-		System.out.println("Ö´ĞĞ³É¹¦£¡");
+		System.out.println("æ‰§è¡ŒæˆåŠŸï¼");
 
 		while (rs.next()) {
-			System.out.println("½øÈënext£¡");
+			System.out.println("è¿›å…¥next");
 			JSONObject obj = new JSONObject();
 			obj.put("Response", "1");
 			obj.put("USERNAME", rs.getString("Microblog.username"));
@@ -279,7 +267,7 @@ public class UserDAOImpl {
 	public String modifyPwd(String username,String password,String newPassword) throws Exception{
 		try {
 			this.stat = con.createStatement();
-			System.out.println("stat ´´½¨£¡");
+			System.out.println("stat åˆ›å»º");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -288,22 +276,17 @@ public class UserDAOImpl {
 		String sql1 = "SELECT * FROM userinfo WHERE username=" + "'"
 				+ username + "'"+"and password="+"'"+password+"'" ;
 		System.out.println(sql1);
-		System.out.println("¿ªÊ¼Ö´ĞĞ£¡");
+		System.out.println("å¼€å§‹æ‰§è¡Œ");
 		ResultSet rs = stat.executeQuery(sql1);
-		System.out.println("Ö´ĞĞ³É¹¦£¡");
+		System.out.println("æ‰§è¡ŒæˆåŠŸ");
 		
 		if (rs.next()) {
-			System.out.println("½øÈënext£¡");
 			JSONObject obj = new JSONObject();
 			String sql2 = "update userinfo set password = "+"'"+newPassword+"'"+" WHERE username=" + "'"+ username + "'";
 			System.out.println(sql2);
-			System.out.println("¿ªÊ¼Ö´ĞĞ£¡");
 			stat.execute(sql2);
-			System.out.println("Ö´ĞĞ³É¹¦£¡");
 			obj.put("Response","1");
-			//array.add(obj);
-
-			System.out.println("ĞŞ¸ÄÃÜÂë³É¹¦");
+			System.out.println("ï¿½Ş¸ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½");
 			return obj.toString();
 		} 
 		else
@@ -317,26 +300,20 @@ public class UserDAOImpl {
 	{
 		try {
 			this.stat = con.createStatement();
-			System.out.println("stat ´´½¨£¡");
+			System.out.println("statåˆ›å»º");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// ½á¹û¼¯
 		JSONObject obj = new JSONObject();
-		System.out.println("stat ´´½¨³É¹¦£¡");
 
 		{
-			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");// ÉèÖÃÈÕÆÚ¸ñÊ½
-			String currentTime = df.format(new Date());// new Date()Îª»ñÈ¡µ±Ç°ÏµÍ³Ê±¼ä
+			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			String currentTime = df.format(new Date());// new Date()
 			String sql = "update Microblog set tweet = '" + comment_content + "'" + ",tweet_time = '" + currentTime + "' WHERE tweet_id = '" + tweet_id + "'";
 			System.out.println(sql);
-			System.out.println("¿ªÊ¼Ö´ĞĞ£¡");
 			stat.execute(sql);
-			System.out.println("Ö´ĞĞ³É¹¦£¡");
-
 			obj.put("Response", "1");
-			System.out.println("·¢±í³É¹¦");
 		}
 		if (stat != null) {
 			stat.close();
@@ -349,28 +326,24 @@ public class UserDAOImpl {
 	public String showComments(int tweet_id) throws Exception {
 		try {
 			this.stat = con.createStatement();
-			System.out.println("stat ´´½¨£¡");
+			System.out.println("stat åˆ›å»º");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// ½á¹û¼¯
-		System.out.println("stat ´´½¨³É¹¦£¡");
+		// ï¿½ï¿½ï¿½
+		System.out.println("statåˆ›å»ºæˆåŠŸ");
 
 		JSONArray array = new JSONArray();
 		String sql = "SELECT * FROM comments WHERE tweet_id=" + String.valueOf(tweet_id);
 		System.out.println(sql);
-		System.out.println("¿ªÊ¼Ö´ĞĞ£¡");
 		ResultSet rs = stat.executeQuery(sql);
-		System.out.println("Ö´ĞĞ³É¹¦£¡");
 		if (rs.next()) {
-			System.out.println("½øÈënext£¡");
 			JSONObject obj = new JSONObject();
 			obj.put("name", rs.getString("USERNAME"));
 			obj.put("time", rs.getString("COMMENT_TIME"));
 			obj.put("text", rs.getString("COMMENT_CONTENT"));
 			array.add(obj);
-			System.out.println("µÇÂ½³É¹¦");
 		} 
 		if (stat != null) {
 			stat.close();

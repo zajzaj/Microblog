@@ -1,5 +1,5 @@
 package com.example.microblog;
-
+//
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,9 +27,9 @@ public class ShowCommentActivity extends ListActivity {
 	private Button funBtn;
 	private ListView listView;
 	
-	 private String[] mListTitle = { "祖米诺", "延毕毕","祖米诺", "延毕毕"};  
+	 private String[] mListTitle = { "脳忙脙脳脜碌", "脩脫卤脧卤脧","脳忙脙脳脜碌", "脩脫卤脧卤脧"};  
 	 private String[] mListStr = { "2014/11/19 17:17", "2014/11/19 20:00", "2014/11/19 17:17", "2014/11/19 20:00" }; 
-	 private String[] mListcom={"我在和室友撕逼","我太不靠谱了","我在和室友撕逼","我太不靠谱了"};
+	 private String[] mListcom={"脦脪脭脷潞脥脢脪脫脩脣潞卤脝","脦脪脤芦虏禄驴驴脝脳脕脣","脦脪脭脷潞脥脢脪脫脩脣潞卤脝","脦脪脤芦虏禄驴驴脝脳脕脣"};
 	    ListView mListView = null;  
 	    ArrayList<Map<String,Object>> mData= new ArrayList<Map<String,Object>>();;  
 	 
@@ -42,8 +42,8 @@ public class ShowCommentActivity extends ListActivity {
 		backBtn = (Button) findViewById(R.id.back_btn);
 		funBtn = (Button) findViewById(R.id.fun_btn);
 
-		/* 修改标题 */
-		title.setText("评论");
+		/* 脨脼赂脛卤锚脤芒 */
+		title.setText("脝脌脗脹");
 		
 		mListView = getListView();  
         

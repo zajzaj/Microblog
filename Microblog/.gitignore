@@ -19,7 +19,7 @@ htdocs/view/compiledTpl
 htdocs/static/m/*.css
 htdocs/static/w/
 bin
-bin/
+bin/*
 # Node.js
 node_modules
 npm-debug.log

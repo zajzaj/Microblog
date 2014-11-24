@@ -36,11 +36,8 @@ public class ShowCommentActivity extends ListActivity {
 	private Button funBtn;
 	private ListView listView;
 	
-	 private String[] mListTitle = { "×æÃ×Åµ", "ÑÓ±Ï±Ï","×æÃ×Åµ", "ÑÓ±Ï±Ï"};  
-	 private String[] mListStr = { "2014/11/19 17:17", "2014/11/19 20:00", "2014/11/19 17:17", "2014/11/19 20:00" }; 
-	 private String[] mListcom={"ÎÒÔÚºÍÊÒÓÑËº±Æ","ÎÒÌ«²»¿¿Æ×ÁË","ÎÒÔÚºÍÊÒÓÑËº±Æ","ÎÒÌ«²»¿¿Æ×ÁË"};
-	    ListView mListView = null;  
-	    ArrayList<Map<String,Object>> mData= new ArrayList<Map<String,Object>>();;  
+	ListView mListView = null;  
+	ArrayList<Map<String,Object>> mData= new ArrayList<Map<String,Object>>();;  
 	    
 	  private void getData(int tweet_id) {
 

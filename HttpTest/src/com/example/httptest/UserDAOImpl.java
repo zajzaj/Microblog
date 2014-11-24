@@ -351,4 +351,32 @@ public class UserDAOImpl {
 		}
 		return array.toString();
 	}
+
+
+	public String uploadHead(String userName, String headPic) throws SQLException {
+		try {
+			//System.out.println("长度！！！"+headPic.length());
+			this.stat = con.createStatement();
+			System.out.println("stat创建");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		JSONObject obj = new JSONObject();
+        try
+		{
+			String sql = "update userhead set headpic = '"+ headPic +"'"+" WHERE username = '" + userName + "'";
+			System.out.println(sql);
+			stat.execute(sql);
+			obj.put("Response", "1");
+		} catch (Exception e){
+			obj.put("Response","-1");
+		}
+		if (stat != null) {
+			stat.close();
+			stat = null;
+		}
+		return obj.toString();
+		
+	}
 }

@@ -105,11 +105,6 @@ public class UserDAOImpl {
 			System.out.println("执行成功");
 
 			obj.put("Response", "1");
-			System.out.println("����ɹ�");
-
-			/*
-			 * { obj.put("Response", "-1"); System.out.println("����ʧ��"); }
-			 */
 
 		}
 		if (stat != null) {
@@ -178,7 +173,6 @@ public class UserDAOImpl {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// ���
 		JSONObject obj = new JSONObject();
 		System.out.println("stat 创建成功");
 
@@ -286,7 +280,6 @@ public class UserDAOImpl {
 			System.out.println(sql2);
 			stat.execute(sql2);
 			obj.put("Response","1");
-			System.out.println("�޸�����ɹ�");
 			return obj.toString();
 		} 
 		else
@@ -331,7 +324,6 @@ public class UserDAOImpl {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// ���
 		System.out.println("stat创建成功");
 
 		JSONArray array = new JSONArray();

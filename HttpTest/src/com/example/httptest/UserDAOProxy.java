@@ -1,4 +1,6 @@
 package com.example.httptest;
+
+import java.sql.SQLException;
  
 public class UserDAOProxy {
     private DatabaseConnection dbc;  
@@ -50,4 +52,16 @@ public class UserDAOProxy {
     	System.out.println("2ret"+flag);
     	return flag;
     }
+    public String showComments(int tweet_id) throws Exception{
+    	String flag = idao.showComments(tweet_id);
+    	dbc.close();
+    	System.out.println("2ret"+flag);
+    	return flag;
+    }
+	public String uploadHead(String userName, String headPic) throws SQLException {
+		String flag = idao.uploadHead(userName,headPic);
+    	dbc.close();
+    	System.out.println("2ret"+flag);
+    	return flag;
+	}
 }

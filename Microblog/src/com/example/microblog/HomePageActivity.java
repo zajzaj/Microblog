@@ -39,6 +39,7 @@ public class HomePageActivity extends ListActivity {
 	private Button funBtn;
 	private ListView listView;
 
+	ArrayList<Map<String, Object>> mData1 = new ArrayList<Map<String, Object>>();
 	ArrayList<Map<String, Object>> mData = new ArrayList<Map<String, Object>>();
 	String username;
 
@@ -48,7 +49,8 @@ public class HomePageActivity extends ListActivity {
 		try {
 			new Thread(new Runnable() {
 				@Override
-				public void run() {
+		
+				public synchronized void run() {
 					List<BasicNameValuePair> paramsList = new ArrayList<BasicNameValuePair>();
 					paramsList.add(new BasicNameValuePair("CHOSE", "4"));
 					paramsList.add(new BasicNameValuePair("USERNAME", username));
@@ -162,8 +164,13 @@ public class HomePageActivity extends ListActivity {
 		});
 
 		// listView = getListView();
-		getData();
-
+	    getData();
+	    try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		listView = (ListView) findViewById(android.R.id.list);
 		MyAdapter myAdapter = new MyAdapter(this);
 		listView.setAdapter(myAdapter);
@@ -280,6 +287,22 @@ public class HomePageActivity extends ListActivity {
 					startActivity(intent);
 					// finish();
 				}
+			});
+			holder.tweet_comment.setOnLongClickListener(new OnLongClickListener(){
+
+				@Override
+				public boolean onLongClick(View v) {
+					// TODO Auto-generated method stub
+					Intent intent = new Intent(HomePageActivity.this,ShowCommentActivity.class);
+					Bundle bl = new Bundle();
+					bl.putString("USERNAME",username);
+                    bl.putInt("TWEET_ID",tweet_id);
+					intent.putExtras(bl);
+					startActivity(intent);
+					return true;
+				}
+				
+				
 			});
 			holder.tweet_repost.setOnClickListener(new OnClickListener() {
 				@Override

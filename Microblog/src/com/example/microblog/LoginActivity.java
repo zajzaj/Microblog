@@ -39,7 +39,7 @@ public class LoginActivity extends Activity {
 				 bundle.putString("USERNAME",username_bak); 
 				 Intent intent = new Intent(LoginActivity.this,HomePageActivity.class);
 				 intent.putExtras(bundle); startActivity(intent);
-				 
+				// finish();
 				break;
 			case -1:
 				Toast.makeText(LoginActivity.this, "µÇÂ½Ê§°Ü",

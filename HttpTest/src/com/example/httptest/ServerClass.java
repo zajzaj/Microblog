@@ -159,6 +159,24 @@ public class ServerClass extends HttpServlet{
         		e.printStackTrace();
         	}
         }
+        else if (chose.equals("9")){
+        	String tweet_id = req.getParameter("TWEET_ID");
+        	try{
+        		ret = showComments(tweet_id);
+        	}catch (Exception e){
+        		e.printStackTrace();
+        	}
+        }
+        else if (chose.equals("10")){
+        	String username = req.getParameter("USERNAME");
+        	String headpic = req.getParameter("HEADPIC");
+        	try{
+        		ret = uploadHead(username,headpic);
+        	}catch (Exception e)
+        	{
+        		e.printStackTrace();
+        	}
+        }
         
         System.out.println("4ret="+ret);
         out.print(ret);
@@ -219,5 +237,15 @@ public class ServerClass extends HttpServlet{
 	   String ret = "-1";
 	   return ret = new UserDAOProxy().modifyMicroblog(username,tweet_id,comment_content);
 	   
+   }
+   
+   private String showComments(String tweet_id) throws Exception{
+	   int id = Integer.parseInt(tweet_id);
+	   String ret = "-1";
+	   return  ret = new UserDAOProxy().showComments(id);
+   }
+   private String uploadHead(String userName,String headPic) throws Exception{
+	   String ret = "-1";
+	   return  ret = new UserDAOProxy().uploadHead(userName,headPic);
    }
 }

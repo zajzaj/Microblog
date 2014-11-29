@@ -133,6 +133,12 @@ public class PersonalCenterActivity extends ListActivity {
 			}
 		});
         getData();
+        try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		listView = (ListView) findViewById(android.R.id.list);
 		MyAdapter myAdapter = new MyAdapter(this);
 		listView.setAdapter(myAdapter);
@@ -231,6 +237,22 @@ public class PersonalCenterActivity extends ListActivity {
 						//finish();
 					}
 				});			
+				holder.tweet_comment.setOnLongClickListener(new OnLongClickListener(){
+
+					@Override
+					public boolean onLongClick(View v) {
+						// TODO Auto-generated method stub
+						Intent intent = new Intent(PersonalCenterActivity.this,ShowCommentActivity.class);
+						Bundle bl = new Bundle();
+						bl.putString("USERNAME",back_username);
+	                    bl.putInt("TWEET_ID",tweet_id);
+						intent.putExtras(bl);
+						startActivity(intent);
+						return true;
+					}
+					
+					
+				});
 				final String tweet = mData.get(position).get("tweet_message").toString();
 				holder.tweet_repost.setOnClickListener(new OnClickListener()
 				{

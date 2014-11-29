@@ -7,14 +7,14 @@ public class DatabaseConnection {
     public DatabaseConnection(){  
         try{  
         	System.out.println("TestDB!");
-        	Class.forName("com.mysql.jdbc.Driver");// 加载Oracle驱动程序
-	        String url="jdbc:mysql://127.0.0.1:3307/Microblog"; //orcl为数据库的SID
+        	Class.forName("com.mysql.jdbc.Driver");//Mysql
+	        String url="jdbc:mysql://127.0.0.1:3307/Microblog"; 
 	        
-	        String user = "root";// 用户名,系统默认的账户名
-	        String password = "System123";// 你安装时选设置的密码
-	        System.out.println("开始尝试连接数据库！");
-	        con = DriverManager.getConnection(url, user, password);// 获取连接
-	        System.out.println("连接成功！");
+	        String user = "root";//Username for Mysql
+	        String password = "System123";//password
+	        System.out.println("Connecting to Mysql");
+	        con = DriverManager.getConnection(url, user, password);
+	        System.out.println("Connecting Success");
 
         }  
         catch(Exception e){

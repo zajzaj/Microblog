@@ -25,8 +25,8 @@ import android.widget.Toast;
 public class LoginActivity extends Activity {
 
 	private String username_bak;
-	public static final String URL = "http://10.0.2.2:8080/HttpTest/login";
-	//public static final String URL = "http://192.168.1.113:8080/HttpTest/login";
+	//public static final String URL = "http://10.0.2.2:8080/HttpTest/login";
+	public static final String URL = "http://192.168.1.113:8080/HttpTest/login";
     private int follow, fans;
 	Handler mHandler = new Handler() {
 		public void handleMessage(Message msg) {

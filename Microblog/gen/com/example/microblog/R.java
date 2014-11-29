@@ -82,8 +82,8 @@ public final class R {
         public static final int comment_confirm_publish=0x7f060035;
         public static final int confirm_publish=0x7f060007;
         public static final int confirm_register=0x7f060006;
-        public static final int editText1=0x7f060041;
-        public static final int editText2=0x7f060042;
+        public static final int editText1=0x7f060043;
+        public static final int editText2=0x7f060044;
         public static final int enter_img=0x7f060011;
         public static final int favor_btn=0x7f060017;
         public static final int fun_btn=0x7f06000f;
@@ -95,6 +95,7 @@ public final class R {
         public static final int login_password=0x7f060003;
         public static final int login_username=0x7f060002;
         public static final int loginbutton=0x7f060004;
+        public static final int lv1=0x7f060041;
         public static final int message_time=0x7f060018;
         public static final int modify_cancel_button=0x7f06003f;
         public static final int modify_comment=0x7f06003e;
@@ -135,7 +136,8 @@ public final class R {
         public static final int sc_item_img=0x7f060014;
         public static final int sc_message_time=0x7f060019;
         public static final int sc_name_text=0x7f060016;
-        public static final int textView4=0x7f060040;
+        public static final int srv1=0x7f060040;
+        public static final int textView4=0x7f060042;
         public static final int title=0x7f060010;
         public static final int tweet_button=0x7f06001f;
         public static final int tweet_comment=0x7f06002d;
@@ -144,20 +146,21 @@ public final class R {
         public static final int tweet_repost=0x7f06002e;
     }
     public static final class layout {
-        public static final int activity_home_page=0x7f030000;
-        public static final int activity_show_comment=0x7f030001;
-        public static final int comment=0x7f030002;
-        public static final int head=0x7f030003;
-        public static final int home_page_list_item=0x7f030004;
-        public static final int login=0x7f030005;
-        public static final int modify_microblog=0x7f030006;
-        public static final int modify_password=0x7f030007;
-        public static final int new_microblog=0x7f030008;
-        public static final int personal_center=0x7f030009;
-        public static final int personal_center_list_item=0x7f03000a;
-        public static final int register=0x7f03000b;
-        public static final int repost=0x7f03000c;
-        public static final int show_comment_list_item=0x7f03000d;
+        public static final int activity_friends_search=0x7f030000;
+        public static final int activity_home_page=0x7f030001;
+        public static final int activity_show_comment=0x7f030002;
+        public static final int comment=0x7f030003;
+        public static final int head=0x7f030004;
+        public static final int home_page_list_item=0x7f030005;
+        public static final int login=0x7f030006;
+        public static final int modify_microblog=0x7f030007;
+        public static final int modify_password=0x7f030008;
+        public static final int new_microblog=0x7f030009;
+        public static final int personal_center=0x7f03000a;
+        public static final int personal_center_list_item=0x7f03000b;
+        public static final int register=0x7f03000c;
+        public static final int repost=0x7f03000d;
+        public static final int show_comment_list_item=0x7f03000e;
     }
     public static final class string {
         public static final int action_settings=0x7f070009;
@@ -184,6 +187,7 @@ public final class R {
         public static final int repassword_hint=0x7f070013;
         public static final int submit=0x7f070012;
         public static final int title_activity_comment=0x7f070019;
+        public static final int title_activity_friends_search=0x7f070021;
         public static final int title_activity_home_page=0x7f070008;
         public static final int title_activity_modify_microblog=0x7f07001f;
         public static final int title_activity_new_microblog_acticity=0x7f070002;

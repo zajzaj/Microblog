@@ -34,5 +34,6 @@
     <string name="modify_pwd_confirm_register">确认修改</string>
     <string name="title_activity_modify_microblog">ModifyMicroblog</string>
     <string name="title_activity_show_comment">ShowCommentActivity</string>
+    <string name="title_activity_friends_search">FriendsSearchActivity</string>
 
 </resources>

@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/head"/>
+      
+    <SearchView
+        android:id="@+id/srv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:inputType="textFilter"
+        android:queryHint="请输入您要查找的内容"/>
+    
+    <ListView
+        android:id="@+id/lv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#969696"/>
+    
+</LinearLayout>
